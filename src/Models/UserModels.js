@@ -11,3 +11,5 @@ const monoSchema=new mongoose.Schema({
    
    const userModel=mongoose.model("users",monoSchema)
    module.exports=userModel
+
+
