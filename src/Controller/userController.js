@@ -80,7 +80,7 @@ catch(err){
     }
     else{
       let crateOtp=await OtpModel.create({email:email,Otp:Otp})
-      let sendMail=SendEmailUtility(email,`your otp is ${Otp}`,"todo planner password varifay")
+      let sendMail=SendEmailUtility(crateOtp)
       return res.status(200).json({status:"success",data:"your email and otp varification successfully",crateOtp:crateOtp})
     }
     }
