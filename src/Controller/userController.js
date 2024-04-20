@@ -70,7 +70,7 @@ catch(err){
 // recover email and otp varification start
 
   exports.RecoverVaryfyEmail=async(req,res)=>{
-    let Email=req.params.Email;
+    let Email=req.params.email;
     let Otp=Math.floor(Math.random() * 1000000)
     
     try{
