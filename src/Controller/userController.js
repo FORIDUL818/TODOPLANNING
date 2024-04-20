@@ -120,7 +120,7 @@ catch(err){
 
 // password reset start
   exports.passwordReset=async(req,res)=>{
-    let email=req.body.Email;
+    let email=req.body.email;
     let Otp=req.body.Otp;
     let statusUpdate=1
     let newPassword=req.body.Password
