@@ -93,8 +93,8 @@ catch(err){
 
 // otp varification start
     exports.OtpVarification=async (req,res)=>{
-      let email=req.params.Email;
-      let otp=req.params.Otp;
+      let email=req.params.email;
+      let otp=req.params.otp;
       let status=0;
       let statusUpdate=1
 
@@ -120,7 +120,7 @@ catch(err){
 
 // password reset start
   exports.passwordReset=async(req,res)=>{
-    let email=req.body.email;
+    let email=req.body.Email;
     let Otp=req.body.Otp;
     let statusUpdate=1
     let newPassword=req.body.Password
