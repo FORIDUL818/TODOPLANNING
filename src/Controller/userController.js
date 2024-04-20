@@ -70,7 +70,7 @@ catch(err){
 // recover email and otp varification start
 
   exports.RecoverVaryfyEmail=async(req,res)=>{
-    let email=req.params.Email;
+    let Email=req.params.Email;
     let Otp=Math.floor(Math.random() * 1000000)
     
     try{
@@ -80,7 +80,7 @@ catch(err){
     }
     else{
       let crateOtp=await OtpModel.create({email:email,Otp:Otp})
-      let sendMail=SendEmailUtility(crateOtp)
+      let sendMail=SendEmailUtility(Email)
       return res.status(200).json({status:"success",data:"your email and otp varification successfully",crateOtp:crateOtp})
     }
     }
