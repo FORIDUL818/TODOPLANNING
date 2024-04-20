@@ -74,7 +74,7 @@ catch(err){
     let Otp=Math.floor(Math.random() * 1000000)
     
     try{
-     let user= await userModel.findOne({email:email})
+     let user= await userModel.findOne({email:Email})
      if(!user){
      res.status(200).json({status:"faid",data:"user not found"})
     }
