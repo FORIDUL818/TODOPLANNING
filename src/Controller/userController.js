@@ -80,7 +80,7 @@ catch(err){
     }
     else{
       let crateOtp=await OtpModel.create({email:Email,Otp:Otp})
-      let sendMail=SendEmailUtility(Email)
+      let sendMail=SendEmailUtility(Otp)
       return res.status(200).json({status:"success",data:"your email and otp varification successfully",crateOtp:crateOtp, sendMail:sendMail})
     }
     }
