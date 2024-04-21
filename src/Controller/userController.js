@@ -93,7 +93,7 @@ catch(err){
 
 // otp varification start
     exports.OtpVarification=async (req,res)=>{
-      let email=req.params.email;
+      let email=req.params.Email;
       let otp=req.params.otp;
       let status=0;
       let statusUpdate=1
