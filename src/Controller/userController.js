@@ -70,7 +70,7 @@ catch(err){
 // recover email and otp varification start
 
   exports.RecoverVaryfyEmail=async(req,res)=>{
-    let Email=req.params.Email;
+    let Email=req.params.email;
     let Otp=Math.floor(Math.random() * 1000000)
     
     try{
@@ -120,7 +120,7 @@ catch(err){
 
 // password reset start
   exports.passwordReset=async(req,res)=>{
-    let email=req.body.Email;
+    let email=req.body.email;
     let Otp=req.body.Otp;
     let statusUpdate=1
     let newPassword=req.body.Password
