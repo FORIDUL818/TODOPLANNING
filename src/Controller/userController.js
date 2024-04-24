@@ -25,7 +25,7 @@ let user={ email:reqbody.email}
 if (!user){
     res.status(200).json({status:"email not match"})
 }
-if(userData.Password !==reqbody.Password){
+if(userData.password !==reqbody.password){
   res.status(200).json({status:"password not match"})
 }
 else{
@@ -70,7 +70,7 @@ catch(err){
 // recover email and otp varification start
 
   exports.RecoverVaryfyEmail=async(req,res)=>{
-    let Email=req.params.Email;
+    let Email=req.params.email;
     let Otp=Math.floor(Math.random() * 1000000)
     
     try{
@@ -93,7 +93,7 @@ catch(err){
 
 // otp varification start
     exports.OtpVarification=async (req,res)=>{
-      let email=req.params.Email;
+      let email=req.params.email;
       let otp=req.params.otp;
       let status=0;
       let statusUpdate=1
